@@ -18,22 +18,20 @@ public class AppTv {
 		boolean linhaValida      = true;
 
 		if (ligar == 'S') {
-		
+
 			System.out.println();
-			//do {
-				System.out.println("Digite o volume e quantidade de trocas (Ex. 50 4):");
-				String linha1 = sc.nextLine();
 
-				String[] numeros = linha1.split(" ");
-				if (numeros == null || numeros.length < 2) {
-					linhaValida = true;
-				} else {
-					linhaValida = false;
-					volume = Integer.valueOf(numeros[0]);
-					quantidadeTrocas = Integer.valueOf(numeros[1]);
-				}
+			System.out.println("Digite o volume e quantidade de trocas (Ex. 50 4):");
+			String linha1 = sc.nextLine();
 
-			//} while (linhaValida);
+			String[] numeros = linha1.split(" ");
+			if (numeros == null || numeros.length < 2) {
+				linhaValida = true;
+			} else {
+				linhaValida = false;
+				volume = Integer.valueOf(numeros[0]);
+				quantidadeTrocas = Integer.valueOf(numeros[1]);
+			}
 
 			System.out.println("Volume: " + volume);
 			System.out.println("Quantidade de trocas de volume: " + quantidadeTrocas);
